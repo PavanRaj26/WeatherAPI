@@ -1,9 +1,9 @@
-Weather Application
+# Weather Application
 
 
 ### Get Access key for Weather API
 
-Register at https://weatherstack.com and get the access key and configure it in .env
+Register at https://weatherstack.com and get the access key and configure it in resource/config.js
 
 ### Running the Application
 

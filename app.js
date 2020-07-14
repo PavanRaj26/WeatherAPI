@@ -13,7 +13,7 @@ window.addEventListener('load',()=>{
 
     let imageFrame = document.querySelector('.imageFrame')
 
-
+    let access_key = process.env.ACCESS_KEY
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
               console.log(position)  
@@ -22,7 +22,7 @@ window.addEventListener('load',()=>{
               const proxy = 'https://cors-anywhere.herokuapp.com/';
               console.log(lat)
               console.log(long)
-              const api = `${proxy}http://api.weatherstack.com/current?access_key=&query=${lat},${long}`;                
+              const api = `${proxy}http://api.weatherstack.com/current?access_key=${access_key}&query=${lat},${long}`;                
               fetch(api)
               .then(response => {
                   return response.json()
